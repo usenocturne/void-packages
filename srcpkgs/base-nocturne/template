@@ -1,0 +1,19 @@
+# Template file for 'base-nocturne'
+pkgname=base-nocturne
+version=0.1
+revision=1
+metapackage=yes
+short_desc="Void Linux base system meta package for Nocturne"
+maintainer="Dominic Frye <me@itsnebula.net>"
+license="Public Domain"
+homepage="https://usenocturne.com/"
+
+depends="
+  base-files busybox-huge bash file util-linux shadow e2fsprogs dosfstools
+  procps-ng iproute2 iputils kmod eudev runit runit-void ifupdown curl xbps"
+
+case "$XBPS_TARGET_MACHINE" in
+        *-musl) depends+=" musl";;
+        *) depends+=" glibc-locales";;
+esac
+
