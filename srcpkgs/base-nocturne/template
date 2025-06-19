@@ -10,7 +10,7 @@ homepage="https://usenocturne.com/"
 
 depends="
   base-files busybox-huge bash file util-linux shadow e2fsprogs dosfstools
-  procps-ng iproute2 iputils kmod eudev runit runit-void ifupdown curl xbps"
+  procps-ng iproute2 iputils kmod eudev runit runit-void curl xbps tzutils"
 
 case "$XBPS_TARGET_MACHINE" in
         *-musl) depends+=" musl";;
